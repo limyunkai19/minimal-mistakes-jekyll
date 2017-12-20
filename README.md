@@ -52,10 +52,38 @@ Your site should be available at <http://localhost:4000>.
 Develop your site, commit new changes and push to GitHub master branch, any new changes will be reflected on GitHub Pages in a few seconds after you push the commits.
 
 ## File Structure
+This section explains the file structure in a Jekyll site. It is optional but recommended to understand Jekyll.
+
+Generally the files and directories in a Jekyll sites can be classify into 4 types.
+
+1. Theme files and directories. <a id="theme"></a> These files specify how your sites looks like. In this repo, these files are copied directly from Miminal Mistakes [repository](https://github.com/mmistakes/minimal-mistakes). They are:
+   - `_includes`
+   - `_layouts` (HTML templates)
+   - `_sass` (CSS styles)
+   - `assets`
+
+2. Jekyll files and directories. These files are essential for Jekyll to generate your sites. They are:
+   - `_config.yml` the global configuration of your site, see [Usage](#usage)
+   - `index.html` the 'home' pages, and yes it is blank
+
+3. Content files and directories. These files determines the content of your site. You should focus and mainly make changes on these files. They are:
+   - `_posts/` (contains your blog post)
+   - `_pages/` (contains the static page)
+   - `_drafts/` (contains unpublished draft)
+   - `_data/navigation.yml` (your site navigation)
+   - `assets/images` (your site images or other files)
+
+4. Others. Such as:
+   - `.gitignore` (Git stuff)
+   - `Gemfile` (Ruby stuff)
+   - `Gemfile.lock` (Ruby stuff)
+   - `LICENSE` (License)
+   - `README.md` (This readme)
 
 ## Usage
 
 ## Customization
+You can make changes to [Theme files](#theme) to customize your site styles. 
 
 ## Credits
 
