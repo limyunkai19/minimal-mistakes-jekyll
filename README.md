@@ -81,12 +81,24 @@ Generally the files and directories in a Jekyll sites can be classify into 4 typ
    - `README.md` (This readme)
 
 ## Usage
+### Site Configuration
+
+### Writing Blog Posts
+
+### Add Static Pages
+
+### Writing Drafts
+
+### Adding Images
 
 ## Customization
-You can make changes to [Theme files](#theme) to customize your site styles. 
+You can make changes to [Theme files](#theme) or the `_config.yml` files to customize your site styles and look. I have made the following customization based on Minimal Mistakes theme.
+
+**Reduce font size** - this [commit](https://github.com/limyunkai19/minimal-mistakes-jekyll/commit/b8a070f069827f2701964a2322e5882123429a4f). You may change the font size to suit your needs.
+
+All others are left unchanged.
+
+Read the official Jekyll [documentation](https://jekyllrb.com/docs/home/) to further customize the site for your own need.
+
 
 ## Credits
-
-## To Do
-- Complete this readme
-- Add static pages including 404
