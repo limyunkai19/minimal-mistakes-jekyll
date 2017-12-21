@@ -1,7 +1,7 @@
 # Minimal Mistakes Jekyll
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/master/LICENSE)
 
-Ready to use Jekyll template with Minimal Mistake theme. Instants blog without knowing git and command line. Just fork it to use for your GitHub Pages.
+Ready to use Jekyll template with Minimal Mistakes theme. Instant blog without knowing git and command line. Just fork it to use for your GitHub Pages.
 
 Demo: <https://limyunkai19.github.io/minimal-mistakes-jekyll/>
 
@@ -99,7 +99,7 @@ Line number | Setting   | Explanation
 
 Line number | Setting   | Explanation
 ------------|-----------|------------
-8           | minimal_mistakes_skin | Change your skin, refer to [minimal mistake skin](https://github.com/mmistakes/minimal-mistakes#skins-color-variations)
+8           | minimal_mistakes_skin | Change your skin, refer to [minimal mistakes skin](https://github.com/mmistakes/minimal-mistakes#skins-color-variations)
 54          | search    | Set it to `true` to add search function
 182         | permalink | Change your permalink, refer to Jekyll [documentation](https://jekyllrb.com/docs/permalinks/)
 
