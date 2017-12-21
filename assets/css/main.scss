@@ -22,3 +22,26 @@ html {
     font-size: 18px; // change from 22
   }
 }
+
+.sidebar {
+  font-size: 14px; // change from 16
+
+  @include breakpoint($medium) {
+    font-size: 16px; // change from 18
+  }
+
+  @include breakpoint($large) {
+    font-size: 18px; // change from 20
+    padding-left: 30px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 20px; // change from 22
+  }
+}
+
+#site-nav {
+  @include breakpoint($large) {
+    padding-left: 30px;
+  }
+}
