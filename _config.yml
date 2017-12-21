@@ -241,6 +241,12 @@ compress_html:
 
 # Defaults
 defaults:
+  # _pages and everything else
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
   # _posts
   - scope:
       path: ""
