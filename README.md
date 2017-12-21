@@ -6,6 +6,8 @@ Ready to use Jekyll template with Minimal Mistake theme. Instants blog without k
 Demo: <https://limyunkai19.github.io/minimal-mistakes-jekyll/>
 
 ## Getting Started
+I am writing this README for non-technical people who intended to blog using Jekyll on GitHub Pages too. Hence, some part might be too trivial for those who know GitHub well, feel free to skip those.
+
 ### Installation for Your GitHub Pages
 [Fork](https://help.github.com/articles/fork-a-repo/#fork-an-example-repository) Minimal Mistakes Jekyll to your own Repository.
 
@@ -82,19 +84,90 @@ Generally the files and directories in a Jekyll sites can be classify into 4 typ
 
 ## Usage
 ### Site Configuration
+First you will need to configure your site settings. This can be done by editing the `_config.yml` file. Following are those lines that you should changes and those lines that you can change.
 
-### Writing Blog Posts
+**Settings that you should change:**
 
-### Add Static Pages
+Line number | Setting   | Explanation
+------------|-----------|------------
+12          | title     | Your site title
+14          | name      | Your name
+15          | description| A short description about your site
+85 - 115    | author    | Your details
 
-### Writing Drafts
+**Settings that you can change:**
 
-### Adding Images
+Line number | Setting   | Explanation
+------------|-----------|------------
+8           | minimal_mistakes_skin | Change your skin, refer to [minimal mistake skin](https://github.com/mmistakes/minimal-mistakes#skins-color-variations)
+54          | search    | Set it to `true` to add search function
+182         | permalink | Change your permalink, refer to Jekyll [documentation](https://jekyllrb.com/docs/permalinks/)
+
+
+### Write Blog Posts
+Navigate to the `_posts` directory in github.com, for example <https://github.com/username/repositoryname/tree/master/_posts>.
+
+Click on create new file and follow the [naming convention](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/master/_posts/2017-12-21-welcome-to-minimal-mistakes-jekyll.md).
+
+You will need a [YAML front matter](https://jekyllrb.com/docs/frontmatter/) for every beginning of your post. Basically the following:
+```
+---
+title:  "Welcome to Minimal Mistakes Jekyll"
+date:   2017-12-21
+categories: update
+tags: jekyll
+---
+```
+Change the title and date and categories and tags are optional. Note: the 3 dashes above and 3 dashes below are important.
+
+After the YAML front matter (after the 3 dashes) you may start writing your own post in markdown. You may find this [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) handy.
+
+Then, click on preview to check if your markdown is correct and the rendered content is what you want (you may ignore the first table, it will disappear in your published site).
+
+After everything is okay, commit this file and wait around 10 seconds for GitHub Pages to reflect your changes.
+
+### Add Pages
+A page contain content that usually permanent, like about page. You may add other pages, for example, experience, resume or CV.
+
+Adding a page is similar to adding a blog post, just a little more work to do.
+
+First, navigate to `_pages` directory, then add new file.
+
+As for the front matter, you will need permalink and title, refer to the following:
+```
+---
+permalink: /about/
+title: "About"
+---
+```
+Then, similar to blog post, write the content in markdown, check using preview and commit this file.
+
+Next, for you pages to appear in the navigation bar, you will need to edit `_data/navigation.yml`. Refer to existing `about`, you will know that you need to add in `title` and `url`. You may remove the `Source Code` from the navigation bar too by simply deleting the 2 lines related to it.
+
+### Write Drafts
+Dealing with drafts is a little inconvenient with GitHub interface but it is still possible.
+
+Similar to adding blog post, go to `_drafts` directory and add a file for your draft.
+
+To publish your draft, click on `raw` then copy the content, create new file in `_posts` then paste the draft content. Don't forgot about YAML front matter and naming convention.
+
+**For local development**
+
+Use the following command to view your drafts
+```sh
+bundle exec jekyll serve --drafts
+```
+
+### Add Images
+
+### Use Custom Domain
 
 ## Customization
 You can make changes to [Theme files](#theme) or the `_config.yml` files to customize your site styles and look. I have made the following customization based on Minimal Mistakes theme.
 
 **Reduce font size** - this [commit](https://github.com/limyunkai19/minimal-mistakes-jekyll/commit/b8a070f069827f2701964a2322e5882123429a4f). You may change the font size to suit your needs.
+
+**Slight redesign the sidebar and title** - this [commit](https://github.com/limyunkai19/minimal-mistakes-jekyll/commit/4de8205edda75a2fbb2ca37088405db1809f1589).
 
 All others are left unchanged.
 
@@ -102,3 +175,4 @@ Read the official Jekyll [documentation](https://jekyllrb.com/docs/home/) to fur
 
 
 ## Credits
+Theme by [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) release 4.8.0
