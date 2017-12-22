@@ -6,7 +6,11 @@ This is a draft with image and it should not appears in your published site. How
 
 This sites is hosted by GitHub Pages. Check out more cute octocat at
 [![octocat]({{ "assets/images/Octocat.png" | absolute_url }})](https://octodex.github.com/)
-> This is an image with a link
+> This is an image with a link, use following syntax
+
+> ``[![octocat]({{ "assets/images/Octocat.png" | absolute_url }})](https://octodex.github.com/)``
 
 ![octocat]({{ "assets/images/Octocat.png" | absolute_url }})
-> This is an image only
+> This is an image only, use following syntax
+
+> ``![octocat]({{ "assets/images/Octocat.png" | absolute_url }})``
