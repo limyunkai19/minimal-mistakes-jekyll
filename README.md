@@ -118,7 +118,7 @@ categories: update
 tags: jekyll
 ---
 ```
-Change the title and date and categories and tags are optional. Note: the 3 dashes above and 3 dashes below are important.
+Change the title and date, categories and tags are optional. Note that the 3 dashes above and 3 dashes below are important.
 
 After the YAML front matter (after the 3 dashes) you may start writing your own post in markdown. You may find this [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) handy.
 
@@ -159,8 +159,32 @@ bundle exec jekyll serve --drafts
 ```
 
 ### Add Images
+To add an image to your blog post, for example `awesomeimage.jpg`.
+
+First, upload the images to `assets/images` directory.
+
+Then in your blog post, use the following syntax to include your image
+```
+![alt_text]({{ "assets/images/awesomeimage.jpg" | absolute_url }})
+```
+`alt_text` is the text to be displayed when your there is an error in rendering your images.
+
+It is also possible to insert an images with link, refer to [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/master/_drafts/first-draft.md) for more detail.
 
 ### Use Custom Domain
+First, register your domain name, say `example.com` at any DNS provider.
+
+Before we start to setup, do note that there are [several ways](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/) to setup an custom domain. We will setup our custom domain with apex domain and `www` subdomain, which mean visitor will be able to visit your site on either `www.example.com` or `example.com`.
+
+Go to your repository settings, under `Custom domain`, type in your custom domain, `example.com` and click **save**. Refer to [here](https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/) for more detail steps.
+
+Then, at your DNS provider, create 3 DNS record for your domain:
+- A record for **@** pointing to `192.30.252.153`
+- A record for **@** pointing to `192.30.252.154`
+- CNAME record for **www** pointing to `username.github.io.` (*mind the extra period!*)
+
+Refer to [here](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages) and [here](https://gist.github.com/mapsam/ce60b87eea561ea6bdbf) as well as GitHub official help ([`www`](https://help.github.com/articles/setting-up-a-www-subdomain/) and [apex](https://help.github.com/articles/setting-up-an-apex-domain/)) for more information.
+
 
 ## Customization
 You can make changes to [Theme files](#theme) or the `_config.yml` files to customize your site styles and look. I have made the following customization based on Minimal Mistakes theme.
