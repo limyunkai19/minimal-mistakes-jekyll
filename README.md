@@ -128,7 +128,7 @@ Then, click on preview to check if your markdown is correct and the rendered con
 
 After everything is okay, commit this file and wait around 10 seconds for GitHub Pages to reflect your changes.
 
-**Note:** you may refer to the [source code](https://raw.githubusercontent.com/limyunkai19/minimal-mistakes-jekyll/master/_posts/2017-12-21-welcome-to-minimal-mistakes-jekyll.md) of this example blog post and its [rendered result](https://limyunkai19.github.io/minimal-mistakes-jekyll/update/welcome-to-minimal-mistakes-jekyll/) to understand more about how to write a blog post 
+**Note:** you may refer to the [source code](https://raw.githubusercontent.com/limyunkai19/minimal-mistakes-jekyll/master/_posts/2017-12-21-welcome-to-minimal-mistakes-jekyll.md) of the example blog post and its [rendered result](https://limyunkai19.github.io/minimal-mistakes-jekyll/update/welcome-to-minimal-mistakes-jekyll/) to understand more about how to write a blog post 
 
 ### Add Pages
 A page contain content that usually permanent, like about page. You may add other pages, for example, experience, resume or CV. You may also remove pages like the **Source Code** on the top right corner.
