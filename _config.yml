@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : # github username, "my_github_username"
   gitlab           :
   google_plus      :
   keybase          :

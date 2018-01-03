@@ -10,6 +10,6 @@ Welcome to the first blog posts of Minimal Mistakes Jekyll. You may edit the tit
 ### Things to take note when creating a blog posts
 
 - Categories and tags are optionals
-- All posts should follow the naming convention `YYYY-MM-DD-name-of-post.ext`, look at the name of this file to get the idea
+- All posts should follow the naming convention `YYYY-MM-DD-name-of-post.md`, look at the name of this file to get the idea
 - It is recommended that the `name-of-post` in the file name to be all lower case  
 - Check this out [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to write your blog posts in markdown

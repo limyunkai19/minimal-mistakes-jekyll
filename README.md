@@ -22,9 +22,9 @@ Publish the site with GitHub Pages on:
     + go to setting, publish your `master` branch with GitHub Pages, detail steps at [here](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
     + your site should be available at <https://username.github.io/my-awesome-blog>
 
-After the sites had been published continue to [Usage](#usage) section to add content to your site.
+After the sites had been published continue to [Usage section](#usage) section to add content to your site.
 
-### Installation for Local Development
+### Installation for Local Development (optional)
 This section is for those who wish to develop their site locally and use git to commit changes for the site. It assumes the knowledge of command line. You may [skip](#file-structure) this section if you don't know git or don't want to touch the command line.
 
 **Prerequisites**
@@ -56,6 +56,8 @@ Develop your site, commit new changes and push to GitHub master branch, any new 
 ## File Structure
 This section explains the file structure in a Jekyll site. It is optional but recommended to understand Jekyll.
 
+Jekyll is a static site generator, it generates a static website based on the given content. Hence, the following files tell Jekyll how to generate your site and determine how your site will look like.
+
 Generally the files and directories in a Jekyll sites can be classify into 4 types.
 
 1. Theme files and directories. <a id="theme"></a> These files specify how your sites looks like. In this repo, these files are copied directly from Miminal Mistakes [repository](https://github.com/mmistakes/minimal-mistakes). They are:
@@ -65,7 +67,7 @@ Generally the files and directories in a Jekyll sites can be classify into 4 typ
    - `assets`
 
 2. Jekyll files and directories. These files are essential for Jekyll to generate your sites. They are:
-   - `_config.yml` the global configuration of your site, see [Usage](#usage)
+   - `_config.yml` the global configuration of your site, see [Usage section](#usage)
    - `index.html` the 'home' pages, and yes it is blank
 
 3. Content files and directories. These files determines the content of your site. You should focus and mainly make changes on these files. They are:
@@ -105,7 +107,7 @@ Line number | Setting   | Explanation
 
 
 ### Write Blog Posts
-Navigate to the `_posts` directory in github.com, for example <https://github.com/username/repositoryname/tree/master/_posts>.
+Navigate to the `_posts` directory in github.com, for example `https://github.com/username/repositoryname/tree/master/_posts`.
 
 Click on create new file and follow the [naming convention](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/master/_posts/2017-12-21-welcome-to-minimal-mistakes-jekyll.md).
 
@@ -126,8 +128,10 @@ Then, click on preview to check if your markdown is correct and the rendered con
 
 After everything is okay, commit this file and wait around 10 seconds for GitHub Pages to reflect your changes.
 
+**Note:** you may refer to the [source code](https://raw.githubusercontent.com/limyunkai19/minimal-mistakes-jekyll/master/_posts/2017-12-21-welcome-to-minimal-mistakes-jekyll.md) of this example blog post and its [rendered result](https://limyunkai19.github.io/minimal-mistakes-jekyll/update/welcome-to-minimal-mistakes-jekyll/) to understand more about how to write a blog post 
+
 ### Add Pages
-A page contain content that usually permanent, like about page. You may add other pages, for example, experience, resume or CV.
+A page contain content that usually permanent, like about page. You may add other pages, for example, experience, resume or CV. You may also remove pages like the **Source Code** on the top right corner.
 
 Adding a page is similar to adding a blog post, just a little more work to do.
 
