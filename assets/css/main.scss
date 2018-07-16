@@ -56,7 +56,6 @@ html {
 
   @include breakpoint($large) {
     font-size: 18px; // change from 20
-    padding-left: 20px;
   }
 
   @include breakpoint($x-large) {
@@ -64,8 +63,8 @@ html {
   }
 }
 
-// pad heading
-#site-nav {
+// pad heading and sidebar
+#site-nav, .sidebar {
   @include breakpoint($large) {
     padding-left: 20px;
   }
