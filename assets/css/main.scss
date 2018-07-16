@@ -7,8 +7,10 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+
+// font size
 html {
-  font-size: 12px; // change from 16
+  font-size: 14px; // change from 16
 
   @include breakpoint($medium) {
     font-size: 14px; // change from 18
@@ -21,6 +23,26 @@ html {
   @include breakpoint($x-large) {
     font-size: 18px; // change from 22
   }
+}
+
+// line height
+.page__content {
+    @include breakpoint($large) {
+      line-height: 1.66em;
+    }
+
+    @include breakpoint($x-large) {
+      line-height: 1.66em;
+    }
+}
+
+.page__title {
+    line-height: normal;
+}
+
+// horizontal rule
+.page__content hr{
+    border-top: 3px solid #e2e3e3;
 }
 
 .sidebar {
