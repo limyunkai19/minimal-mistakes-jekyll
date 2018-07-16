@@ -104,6 +104,7 @@ Line number | Setting   | Explanation
 8           | minimal_mistakes_skin | Change your skin, refer to [minimal mistakes skin](https://github.com/mmistakes/minimal-mistakes#skins-color-variations)
 54          | search    | Set it to `true` to add search function
 182         | permalink | Change your permalink, refer to Jekyll [documentation](https://jekyllrb.com/docs/permalinks/)
+186         | sticky_sidebar | Set it to `false` to make the left sidebar (author profile) non-sticky
 
 
 ### Write Blog Posts
@@ -128,7 +129,7 @@ Then, click on preview to check if your markdown is correct and the rendered con
 
 After everything is okay, commit this file and wait around 10 seconds for GitHub Pages to reflect your changes.
 
-**Note:** you may refer to the [source code](https://raw.githubusercontent.com/limyunkai19/minimal-mistakes-jekyll/master/_posts/2017-12-21-welcome-to-minimal-mistakes-jekyll.md) of the example blog post and its [rendered result](https://limyunkai19.github.io/minimal-mistakes-jekyll/update/welcome-to-minimal-mistakes-jekyll/) to understand more about how to write a blog post 
+**Note:** you may refer to the [source code](https://raw.githubusercontent.com/limyunkai19/minimal-mistakes-jekyll/master/_posts/2017-12-21-welcome-to-minimal-mistakes-jekyll.md) of the example blog post and its [rendered result](https://limyunkai19.github.io/minimal-mistakes-jekyll/update/welcome-to-minimal-mistakes-jekyll/) to understand more about how to write a blog post
 
 ### Add Pages
 A page contain content that usually permanent, like about page. You may add other pages, for example, experience, resume or CV. You may also remove pages like the **Source Code** on the top right corner.
@@ -175,6 +176,16 @@ Then in your blog post, use the following syntax to include your image
 
 It is also possible to insert an images with link, refer to [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/master/_drafts/first-draft.md) for more detail.
 
+### Add Math Equation
+To add math equation into your post, you need to enable math support through `use_math: true` in the YAML front matter. For example,
+```
+---
+title:  "Add Math Support"
+use_math: true
+---
+```
+Then, you can type your equation using LaTeX like syntax. Refer [here]( https://limyunkai19.github.io/minimal-mistakes-jekyll/math-support/) for more imformation.
+
 ### Use Custom Domain
 First, register your domain name, say `example.com` at any DNS provider.
 
@@ -183,8 +194,7 @@ Before we start to setup, do note that there are [several ways](https://help.git
 Go to your repository settings, under `Custom domain`, type in your custom domain, `example.com` and click **save**. Refer to [here](https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/) for more detail steps.
 
 Then, at your DNS provider, create 3 DNS record for your domain:
-- A record for **@** pointing to `192.30.252.153`
-- A record for **@** pointing to `192.30.252.154`
+- A record for **@** pointing to `username.github.io.` (*mind the extra period!*)
 - CNAME record for **www** pointing to `username.github.io.` (*mind the extra period!*)
 
 Refer to [here](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages) and [here](https://gist.github.com/mapsam/ce60b87eea561ea6bdbf) as well as GitHub official help ([`www`](https://help.github.com/articles/setting-up-a-www-subdomain/) and [apex](https://help.github.com/articles/setting-up-an-apex-domain/)) for more information.
@@ -193,9 +203,16 @@ Refer to [here](https://www.namecheap.com/support/knowledgebase/article.aspx/964
 ## Customization
 You can make changes to [Theme files](#theme) or the `_config.yml` files to customize your site styles and look. I have made the following customization based on Minimal Mistakes theme.
 
-**Reduce font size** - this [commit](https://github.com/limyunkai19/minimal-mistakes-jekyll/commit/b8a070f069827f2701964a2322e5882123429a4f). You may change the font size to suit your needs.
+**Reduce font size** -  [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/c36ed03ec0b4b764a260b420662d7b24d3dc161d/assets/css/main.scss#L11)
+. You may change the font size to suit your needs.
 
-**Slight redesign the sidebar and title** - this [commit](https://github.com/limyunkai19/minimal-mistakes-jekyll/commit/4de8205edda75a2fbb2ca37088405db1809f1589).
+**Slight reduce author profile font size** - [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/c36ed03ec0b4b764a260b420662d7b24d3dc161d/assets/css/main.scss#L49).
+
+**Reposition of left sidebar, content, and right sidebar** - [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/c36ed03ec0b4b764a260b420662d7b24d3dc161d/assets/css/main.scss#L73) and [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/c36ed03ec0b4b764a260b420662d7b24d3dc161d/_sass/minimal-mistakes/_variables.scss#L124).
+
+**Add math support** - [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/7848ac72ac4305926629a729f2648e89669e2919/_includes/head/custom.html#L5) and [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/7848ac72ac4305926629a729f2648e89669e2919/_config.yml#L243).
+
+**Optional sticky left sidebar feature** - [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/7848ac72ac4305926629a729f2648e89669e2919/_includes/sidebar.html#L2) and [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/7848ac72ac4305926629a729f2648e89669e2919/_config.yml#L186).
 
 All others are left unchanged.
 
