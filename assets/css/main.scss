@@ -45,6 +45,8 @@ html {
     border-top: 3px solid #e2e3e3;
 }
 
+
+// left sidebar (author profile)
 .sidebar {
   font-size: 14px; // change from 16
 
@@ -54,7 +56,7 @@ html {
 
   @include breakpoint($large) {
     font-size: 18px; // change from 20
-    padding-left: 30px;
+    padding-left: 20px;
   }
 
   @include breakpoint($x-large) {
@@ -62,8 +64,22 @@ html {
   }
 }
 
+// pad heading
 #site-nav {
   @include breakpoint($large) {
-    padding-left: 30px;
+    padding-left: 20px;
+  }
+}
+
+// adjust left/right sidebar and page position on x-large
+.sidebar{
+  @include breakpoint($x-large) {
+    width: calc(#{$right-sidebar-width} + 30px - 1em);
+  }
+}
+
+.page, .archive {
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width} - 30px);
   }
 }
