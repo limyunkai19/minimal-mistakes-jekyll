@@ -248,6 +248,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      use_math: false
   # _posts
   - scope:
       path: ""
@@ -259,3 +260,4 @@ defaults:
       comments: # true
       share: true
       related: true
+      use_math: false
