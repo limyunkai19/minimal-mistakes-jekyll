@@ -214,6 +214,10 @@ You can make changes to [Theme files](#theme) or the `_config.yml` files to cust
 
 **Optional sticky left sidebar feature** - [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/7848ac72ac4305926629a729f2648e89669e2919/_includes/sidebar.html#L2) and [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/7848ac72ac4305926629a729f2648e89669e2919/_config.yml#L186).
 
+**Enhance table styles** - [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/master/_sass/minimal-mistakes/_tables.scss)
+
+**Add date for post meta** - [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/d2b29614911d6e2cd2aac138c0f1fb4fd2ab4658/_layouts/single.html#L30) and [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/d2b29614911d6e2cd2aac138c0f1fb4fd2ab4658/_includes/archive-single.html#L33)
+
 All others are left unchanged.
 
 You can even **change the theme** to be any Jekyll theme by replacing related [Theme files](#theme) to be your destination theme. However, do note that different theme has different layout options. This template is setup to use `single` layout from the Minimal Mistakes theme as a default layout. In the case that your destination theme does not support `single` layout or you wish to change the default layout, change the default layout at [line 248](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/cb6f671e52bc6295d0ddf057e63e2f2ffea674a8/_config.yml#L248) and [line 255](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/cb6f671e52bc6295d0ddf057e63e2f2ffea674a8/_config.yml#L255) of `_config.yml` file. Sometimes, there is also a need to make changes on `_config.yml` to resolve the incompatibility between different themes.
