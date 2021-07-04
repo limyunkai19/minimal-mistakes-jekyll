@@ -3,26 +3,43 @@
 
 Ready to use Jekyll template with Minimal Mistakes theme. Instant blog without knowing git and command line. Just fork it to use for your GitHub Pages.
 
-Demo: <https://limyunkai19.github.io/minimal-mistakes-jekyll/>
+Demo: <https://limyunkai19.github.io/minimal-mistakes-jekyll> &nbsp; | &nbsp; <https://limyunkai.com>
+
+## Table of Content
+- [Getting Started](#getting-started)
+  * [Installation for Your GitHub Pages](#installation-for-your-github-pages)
+  * [Installation for Local Development (optional)](#installation-for-local-development--optional-)
+- [File Structure](#file-structure)
+- [Personalization](#personalization)
+  * [Site Configuration](#site-configuration)
+  * [Repository Cleanup and Personalization](#repository-cleanup-and-personalization)
+  * [Use Custom Domain](#use-custom-domain)
+  * [Further Customization](#further-customization)
+- [Usage](#usage)
+  * [Write Blog Posts](#write-blog-posts)
+  * [Add Pages](#add-pages)
+  * [Write Drafts](#write-drafts)
+  * [Add Images](#add-images)
+  * [Add Math Equation](#add-math-equation)
+- [Customization](#customization)
+- [Credits](#credits)
 
 ## Getting Started
 I am writing this README for non-technical people who intended to blog using Jekyll on GitHub Pages too. Hence, some part might be too trivial for those who know GitHub well, feel free to skip those.
 
 ### Installation for Your GitHub Pages
-[Fork](https://help.github.com/articles/fork-a-repo/#fork-an-example-repository) Minimal Mistakes Jekyll to your own Repository.
+[Fork](https://help.github.com/articles/fork-a-repo/#fork-an-example-repository) this repo (minimal-mistakes-jekyll) to your own Repository.
 
 Publish the site with GitHub Pages on:
 - <https://username.github.io> (recommended)
-    + rename the forked repository to username.github.io
-    + your site should be available at <https://username.github.io> after renaming
-
-
+   + rename the forked repository to username.github.io
+   + your site should be available at <https://username.github.io> after renaming
 - <https://username.github.io/repositoryname>
     + rename the forked repository to a name you like, for example my-awesome-blog
     + go to setting, publish your `master` branch with GitHub Pages, detail steps at [here](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
     + your site should be available at <https://username.github.io/my-awesome-blog>
 
-After the sites had been published continue to [Usage section](#usage) section to add content to your site.
+After the sites had been published continue to [Personalization section](#personalization) to personalize your site and [Usage section](#usage) section to add content to your site.
 
 ### Installation for Local Development (optional)
 This section is for those who wish to develop their site locally and use git to commit changes for the site. It assumes the knowledge of command line. You may [skip](#file-structure) this section if you don't know git or don't want to touch the command line.
@@ -84,7 +101,7 @@ Generally the files and directories in a Jekyll sites can be classify into 4 typ
    - `LICENSE` (License)
    - `README.md` (This readme)
 
-## Usage
+## Personalization
 ### Site Configuration
 First you will need to configure your site settings. This can be done by editing the `_config.yml` file. Following are those lines that you should changes and those lines that you can change.
 
@@ -95,7 +112,7 @@ Line number | Setting   | Explanation
 12          | title     | Your site title
 14          | name      | Your name
 15          | description| A short description about your site
-85 - 115    | author    | Your details
+85 - 115    | author    | Your details （name, picture, email, social media links)
 
 **Settings that you can change:**
 
@@ -106,7 +123,34 @@ Line number | Setting   | Explanation
 182         | permalink | Change your permalink, refer to Jekyll [documentation](https://jekyllrb.com/docs/permalinks/)
 186         | sticky_sidebar | Set it to `false` to make the left sidebar (author profile) non-sticky
 
+### Repository Cleanup and Personalization
+I have included some demo posts for the demo, you can remove them after you had forked this repo for your personal site.
 
+Files                  | Action
+-----------------------|------------
+_data/nagivation.yml   | Remove 7th and 8th line to remove the "Source Code" link in the site nagivation
+_posts/*               | Delete all files in _posts/ folder as they are demo posts
+_drafts/*              | Delete all files in _drafts/ folder as they are demo posts
+_pages/about.md        | Edit this, write something about yourself
+README.md              | Remove this file or update the demo link at 6th line (optional)
+
+### Use Custom Domain
+First, register your domain name, say `example.com` at any DNS provider.
+
+Before we start to setup, do note that there are [several ways](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/) to setup an custom domain. We will setup our custom domain with apex domain and `www` subdomain, which mean visitor will be able to visit your site on either `www.example.com` or `example.com`.
+
+Go to your repository settings, under `Custom domain`, type in your custom domain, `example.com` and click **save**. Refer to [here](https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/) for more detail steps.
+
+Then, at your DNS provider, create 3 DNS record for your domain:
+- A record for **@** pointing to `username.github.io.` (*mind the extra period!*)
+- CNAME record for **www** pointing to `username.github.io.` (*mind the extra period!*)
+
+Refer to [here](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages) and [here](https://gist.github.com/mapsam/ce60b87eea561ea6bdbf) as well as GitHub official help ([`www`](https://help.github.com/articles/setting-up-a-www-subdomain/) and [apex](https://help.github.com/articles/setting-up-an-apex-domain/)) for more information.
+
+### Further Customization
+You change further customize and style your blog by changing the [theme files](#theme). Refer [here](#customization) to understand how is this version different from the original [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes/tree/4.8.0).
+
+## Usage
 ### Write Blog Posts
 Navigate to the `_posts` directory in github.com, for example `https://github.com/username/repositoryname/tree/master/_posts`.
 
@@ -186,22 +230,8 @@ use_math: true
 ```
 Then, you can type your equation using LaTeX like syntax. Refer [here]( https://limyunkai19.github.io/minimal-mistakes-jekyll/math-support/) for more imformation.
 
-### Use Custom Domain
-First, register your domain name, say `example.com` at any DNS provider.
-
-Before we start to setup, do note that there are [several ways](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/) to setup an custom domain. We will setup our custom domain with apex domain and `www` subdomain, which mean visitor will be able to visit your site on either `www.example.com` or `example.com`.
-
-Go to your repository settings, under `Custom domain`, type in your custom domain, `example.com` and click **save**. Refer to [here](https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/) for more detail steps.
-
-Then, at your DNS provider, create 3 DNS record for your domain:
-- A record for **@** pointing to `username.github.io.` (*mind the extra period!*)
-- CNAME record for **www** pointing to `username.github.io.` (*mind the extra period!*)
-
-Refer to [here](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages) and [here](https://gist.github.com/mapsam/ce60b87eea561ea6bdbf) as well as GitHub official help ([`www`](https://help.github.com/articles/setting-up-a-www-subdomain/) and [apex](https://help.github.com/articles/setting-up-an-apex-domain/)) for more information.
-
-
 ## Customization
-You can make changes to [Theme files](#theme) or the `_config.yml` files to customize your site styles and look. I have made the following customization based on Minimal Mistakes theme.
+You can make changes to [Theme files](#theme) or the `_config.yml` files to customize your site styles and look. I have made the following customization based on the [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes/tree/4.8.0).
 
 **Reduce font size** -  [here](https://github.com/limyunkai19/minimal-mistakes-jekyll/blob/c36ed03ec0b4b764a260b420662d7b24d3dc161d/assets/css/main.scss#L11)
 . You may change the font size to suit your needs.
